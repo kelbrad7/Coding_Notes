@@ -5,15 +5,18 @@ const addBtn = document.querySelector("#add_btn");
 const form = document.querySelector ("#notes_form");
 const listCS = document.querySelector("#css_ul");
 const listJS = document.querySelector("#js_ul");
+const searchBar = document.querySelector("#search_bar");
 const jsArray = JSON.parse(localStorage.getItem("JS")) || [];
 const cssArray = JSON.parse(localStorage.getItem("CSS")) || [];
 let cssNote = "";
 let jsNote = "";
- 
+  
 
 //***function to check if radio has been selected***//
 
-addBtn.addEventListener ("click", checkInputs)
+
+
+addBtn.addEventListener ("click", checkInputs);
     
          //** check inputs and assign values  ***//
 
@@ -174,7 +177,7 @@ if (target.classList.contains("edit_btn")) {
 
     listCS.addEventListener("click", function(e) {
     if (e.target.classList.contains("done_btn")) {
-    e.target.parentNode.setAttribute("contentEditable", "false")
+    e.target.parentNode.childNodes[0].setAttribute("contentEditable", "false")
      const newText = e.target.parentNode.childNodes[0].textContent;
      console.log (newText);
     cssArray.splice(idEdit,1,newText);
@@ -186,7 +189,7 @@ if (target.classList.contains("edit_btn")) {
 listJS.addEventListener("click", function(e) {
     let target = e.target;
 if (target.classList.contains("edit_btn")) {
-    target.parentNode.setAttribute ("contentEditable","true");
+    target.parentNode.childNodes[0].setAttribute ("contentEditable","true");
     const textInTa = target.parentNode.childNodes[0].textContent;
     console.log(textInTa);
         for (notes of jsArray){
@@ -196,7 +199,7 @@ if (target.classList.contains("edit_btn")) {
 
     listJS.addEventListener("click", function(e) {
     if (e.target.classList.contains("done_btn")) {
-    e.target.parentNode.setAttribute("contentEditable", "false")
+    e.target.parentNode.childNodes[0].setAttribute("contentEditable", "false")
     const newText = e.target.parentNode.childNodes[0].textContent;
     console.log(newText);
     jsArray.splice(idEdit,1,newText);
@@ -204,7 +207,33 @@ if (target.classList.contains("edit_btn")) {
         
         }})
 
-                
+        const searchBtn = document.querySelector("#search_btn");
+        ul = document.getElementById("ul");
+
+        searchBtn.addEventListener("click", searchNotes);
+
+    function searchNotes (){
+        for (i=0; i<listCS.length; i++) {
+            divID=listCS[i].getElementByTagName("div")[0];
+            txtValue=divID.textContent || divID.innerText;
+            if (txtValue.toUpperCase().indexOf(filter)>-1){
+                listCS[i].style.display = "";
+            } else {
+                listCS[i].style.display = "none";
+            }
+            }
+        }
+            
+        // }
+
+        // for (note of cssArray)
+        // if (searchBar.value == note){
+        //     newCssDiv[note].style.display = ""
+        // }
+        //     else {newCssDiv[note].style.display = "none";
+        // }
+        //     }
+            
     
     
     

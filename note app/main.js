@@ -174,7 +174,7 @@ if (target.classList.contains("edit_btn")) {
 
     listCS.addEventListener("click", function(e) {
     if (e.target.classList.contains("done_btn")) {
-    e.target.parentNode.setAttribute("contentEditable", "false")
+    e.target.parentNode.childNodes[0].setAttribute("contentEditable", "false")
      const newText = e.target.parentNode.childNodes[0].textContent;
      console.log (newText);
     cssArray.splice(idEdit,1,newText);
@@ -196,7 +196,7 @@ if (target.classList.contains("edit_btn")) {
 
     listJS.addEventListener("click", function(e) {
     if (e.target.classList.contains("done_btn")) {
-    e.target.parentNode.setAttribute("contentEditable", "false")
+    e.target.parentNode.childNodes[0].setAttribute("contentEditable", "false")
     const newText = e.target.parentNode.childNodes[0].textContent;
     console.log(newText);
     jsArray.splice(idEdit,1,newText);
