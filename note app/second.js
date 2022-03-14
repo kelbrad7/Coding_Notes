@@ -202,14 +202,6 @@ if (target.classList.contains("edit_btn")) {
 
 }})
 
-// listJS.addEventListener("mouseover", function(e) {
-//     if (e.target.classList.contains ("jsDiv")){
-//     e.target.parentNode.style.color = "pink";
-//     e.target.parentNode.style.width = "50vw";
-
-//     }
-// })
-
                 
     
     

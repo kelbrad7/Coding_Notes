@@ -1,4 +1,3 @@
-
 const addNotes = document.querySelector ("#add_notes");
 const cssRadio = document.querySelector("#css_radio")
 const jsRadio = document.querySelector ("#js_radio");
@@ -77,7 +76,7 @@ addBtn.addEventListener ("click", checkInputs)
      function addBtns(div){
         const removeBtn= document.createElement("button");
         removeBtn.type = "submit";
-        removeBtn.innerText = "X";
+        removeBtn.innerText = "Delete";
         removeBtn.className = "del_btn";
         div.appendChild(removeBtn);
         const editBtn = document.createElement("button")
@@ -174,6 +173,8 @@ if (target.classList.contains("edit_btn")) {
     if (e.target.classList.contains("done_btn")) {
      const newText = e.target.parentNode.childNodes[0].value;
      console.log(newText);
+     e.target.parentNode.childNodes[0].setAttribute("readonly", "true");
+
     cssArray.splice(idEdit,1,newText);
     localStorage.setItem("CSS",JSON.stringify(cssArray));
 
@@ -195,10 +196,12 @@ if (target.classList.contains("edit_btn")) {
     if (e.target.classList.contains("done_btn")) {
      const newText = e.target.parentNode.childNodes[0].value;
      console.log(newText);
+     e.target.parentNode.childNodes[0].setAttribute("readonly", "true");
     jsArray.splice(idEdit,1,newText);
     localStorage.setItem("JS",JSON.stringify(jsArray));
 
 }})
+
 
                 
     
