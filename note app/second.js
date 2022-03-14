@@ -9,7 +9,7 @@ const jsArray = JSON.parse(localStorage.getItem("JS")) || [];
 const cssArray = JSON.parse(localStorage.getItem("CSS")) || [];
 let cssNote = "";
 let jsNote = "";
-
+ 
 
 //***function to check if radio has been selected***//
 
@@ -76,7 +76,7 @@ addBtn.addEventListener ("click", checkInputs)
      function addBtns(div){
         const removeBtn= document.createElement("button");
         removeBtn.type = "submit";
-        removeBtn.innerText = "Delete";
+        removeBtn.innerHTML = "X"
         removeBtn.className = "del_btn";
         div.appendChild(removeBtn);
         const editBtn = document.createElement("button")

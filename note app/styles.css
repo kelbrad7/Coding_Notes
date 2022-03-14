@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat (12 1fr);
     grid-template-rows: 6rem 15rem;
-    
+     
 }
 #header {
     grid-column: 1/12;
@@ -42,12 +42,18 @@ form {
 
 #css_radio {
     grid-column: 1;
-    cursor: pointer; 
+    cursor: pointer;
+    width: 2rem;
+    height: 1.5rem; 
+    align-self: start;
 }
 
 #js_radio{
     grid-column: 2;
     cursor: pointer;
+    width: 2rem;
+    height: 1.5rem;
+    align-self: start; 
 }
 
 #add_btn {
@@ -88,31 +94,10 @@ form {
     padding: 2rem;
     justify-self: start;
     display: grid;
+    padding-top: 1rem;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
 }
-
-.cssNote {
-    grid-column: 1/3;
-    grid-row: 1;
-    border: none;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    resize: none;
-    min-width: 100%;
-    height: 7rem;
-    outline: none;
-}
-.cssNote:hover{
-    height: fit-content;
-    color: red;
-    z-index: 100;
-}
-
-.cssNote:hover {
-    color: red;
-    z-index: 100;
-}
-
-
 .jsDiv{
     font-size: 1rem;
     grid-column: 6;
@@ -125,11 +110,39 @@ form {
     padding: 2rem;
     justify-self: start;
     display: grid;
+    padding-top: 1rem;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
     
 }
+
+.cssDiv:hover {
+    color: blue;
+    z-index: 100;
+    height: 15rem;
+
+}
 .jsDiv:hover {
-    height: fit-content;
-    color: red;
+    height: 15rem;
+    color: blue;
+    z-index: 100;
+}
+
+
+.cssNote {
+    grid-column: 1/3;
+    grid-row: 1;
+    border: none;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    resize: none;
+    min-width: 15rem;
+    min-height: 7rem;
+    outline: none;
+}
+.cssNote:hover{
+    min-height: 7rem;
+    color: blue;
     z-index: 100;
 }
 
@@ -141,40 +154,66 @@ form {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     resize: none;
-    min-width: 100%;
+    min-width: 15rem;
     height: 7rem;
     outline: none;
 }
-
-
+.jsNote:hover{
+    min-height: 7rem;
+    color: blue;
+    z-index: 100;
+}
 .del_btn {
-    grid-column: 1;
-    grid-row: 2;
-    font-size: 1rem;
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 1.25rem;
     height: 2rem;
     width: 5rem;
-    align-self: bottom;
+    align-self: start;
+    justify-self: end;
+    background: none;
+    border: none;
+    color: red;
+    font-weight: 3rem;
+    font-family: "FontAwesome";
+    content: "\F5DE";
+
+}
+.del_btn:hover {
+    font-size: 2rem;
+    font-family: "Font Awesome 5 Free";
+    content: "\F5DE";
 
 }
 
 .edit_btn{
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     width: 5rem;
     height: 2rem;
     font-size: 1rem;
-
+    align-self: end;
 }
 
+.edit_btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+
 .done_btn{
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
     padding: .2rem;
     width: 5rem;
     height: 2rem;
     font-size: 1rem;
+    align-self: end;
+}
 
-
+.done_btn:hover {
+    background-color: green;
+    color: white;
 }
     
 
