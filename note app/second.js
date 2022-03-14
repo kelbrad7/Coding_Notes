@@ -74,19 +74,20 @@ addBtn.addEventListener ("click", checkInputs)
      }
 
      function addBtns(div){
-        const removeBtn= document.createElement("button");
-        removeBtn.type = "submit";
-        removeBtn.innerHTML = "X"
-        removeBtn.className = "del_btn";
-        div.appendChild(removeBtn);
+        const deleteBtn= document.createElement("button");
+        deleteBtn.type = "submit";
+        deleteBtn.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"/></svg>'
+        deleteBtn.className = "del_btn"
+        div.appendChild(deleteBtn);
+        deleteBtn.appendChild.trash
         const editBtn = document.createElement("button")
         editBtn.type = "submit";
-        editBtn.innerText = "Edit";
+        editBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="m4.22 23.2l-1.9 8.2a2.06 2.06 0 0 0 2 2.5a2.14 2.14 0 0 0 .43 0L13 32l15.84-15.78L20 7.4Z" class="clr-i-solid clr-i-solid-path-1"/><path fill="currentColor" d="m33.82 8.32l-5.9-5.9a2.07 2.07 0 0 0-2.92 0L21.72 5.7l8.83 8.83l3.28-3.28a2.07 2.07 0 0 0-.01-2.93Z" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>';
         editBtn.className = "edit_btn";
         div.appendChild(editBtn);
         const doneBtn = document.createElement("button")
         doneBtn.type = "submit";
-        doneBtn.innerText = "Done";
+        doneBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="m8.818 19.779l-6.364-6.364l2.83-2.83l3.534 3.544l9.898-9.908l2.83 2.83L8.818 19.779Z"/></svg>';
         doneBtn.className = "done_btn";
         div.appendChild(doneBtn);
      }

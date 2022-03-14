@@ -83,62 +83,35 @@ form {
 }
 
 .cssDiv{
-    font-size: 1rem;
-    grid-column: 6;
-    grid-row: 4;
-    margin-top: 2rem;
-    border: solid;
-    border-radius: .5rem;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-    justify-self: start;
+    min-width: 100%;
+    min-height: auto;
     display: grid;
-    padding-top: 1rem;
-    padding-right: 0;
-    padding-bottom: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: solid;
+    margin-bottom: 1rem;
 }
+
 .jsDiv{
-    font-size: 1rem;
-    grid-column: 6;
-    grid-row: 4;
-    margin-top: 2rem;
-    border: solid;
-    border-radius: .5rem;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-    justify-self: start;
+    min-width: 100%;
+    min-height: auto;
     display: grid;
-    padding-top: 1rem;
-    padding-right: 0;
-    padding-bottom: 0.5rem;
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    border: solid;
+    margin-bottom: 1rem;
 }
-
-.cssDiv:hover {
-    color: blue;
-    z-index: 100;
-    height: 15rem;
-
-}
-.jsDiv:hover {
-    height: 15rem;
-    color: blue;
-    z-index: 100;
-}
-
 
 .cssNote {
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 1/3;
     border: none;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    resize: none;
-    min-width: 15rem;
-    min-height: 7rem;
-    outline: none;
+    max-width: 20rem;
+    max-height: 15rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 .cssNote:hover{
     min-height: 7rem;
@@ -148,15 +121,17 @@ form {
 
 
 .jsNote{
-    grid-column: 1/3;
-    grid-row: 1;
+    grid-column: 1/2;
+    grid-row: 1/3;
     border: none;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    resize: none;
-    min-width: 15rem;
-    height: 7rem;
-    outline: none;
+    max-width: 20rem;
+    max-height: 15rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 .jsNote:hover{
     min-height: 7rem;
@@ -178,8 +153,6 @@ form {
 }
 .del_btn:hover {
     font-size: 2rem;
-    
-
 }
 
 .edit_btn{
@@ -218,6 +191,10 @@ form {
     background-color: green;
     color: white;
 }
+.done_btn svg{
+    pointer-events: none;
+}
+
     
 
 
