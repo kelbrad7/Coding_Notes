@@ -5,7 +5,6 @@ const addBtn = document.querySelector("#add_btn");
 const form = document.querySelector ("#notes_form");
 const listCS = document.querySelector("#css_ul");
 const listJS = document.querySelector("#js_ul");
-const searchBar = document.querySelector("#search_bar");
 const jsArray = JSON.parse(localStorage.getItem("JS")) || [];
 const cssArray = JSON.parse(localStorage.getItem("CSS")) || [];
 let cssNote = "";
@@ -207,32 +206,27 @@ if (target.classList.contains("edit_btn")) {
         
         }})
 
-        const searchBtn = document.querySelector("#search_btn");
-        ul = document.getElementById("ul");
+    //     const searchBtn = document.querySelector("#search_btn");
+    //     ul = document.getElementById("ul");
 
-        searchBtn.addEventListener("click", searchNotes);
+    //     searchBtn.addEventListener("click", searchNotes);
+    //     const searchValue = document.querySelector("#search_bar").value;
 
-    function searchNotes (){
-        for (i=0; i<listCS.length; i++) {
-            divID=listCS[i].getElementByTagName("div")[0];
-            txtValue=divID.textContent || divID.innerText;
-            if (txtValue.toUpperCase().indexOf(filter)>-1){
-                listCS[i].style.display = "";
-            } else {
-                listCS[i].style.display = "none";
-            }
-            }
-        }
+
+    // function searchNotes (){
+    //     for (i=0; i<listCS.length; i++) {
+    //         divID=listCS[i].getElementByTagName("div")[0];
+    //         txtValue=divID.textContent || divID.innerText;
+    //         if (listCS[i].includes(txtValue)){
+    //             listCS[i].style.display = "";
+    //         } else {
+    //             listCS[i].style.display = "none";
+    //         }
+    //         }
+    //     }
             
         // }
 
-        // for (note of cssArray)
-        // if (searchBar.value == note){
-        //     newCssDiv[note].style.display = ""
-        // }
-        //     else {newCssDiv[note].style.display = "none";
-        // }
-        //     }
             
     
     

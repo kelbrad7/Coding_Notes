@@ -45,32 +45,41 @@ form {
     grid-column: 1;
     cursor: pointer;
     width: 2rem;
-    height: 1.5rem; 
+    height: 2rem; 
     align-self: start;
+}
+#css-radio label{
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 #js_radio{
     grid-column: 2;
     cursor: pointer;
     width: 2rem;
-    height: 1.5rem;
+    height: 2rem;
     align-self: start; 
 }
 
 #add_btn {
     grid-column: 4;
     cursor: pointer;
+    background:none;
+    border:none;
+    font-size: 2.5rem;
 }
  
+#add_btn svg{
+    pointer-events: none;
+}
 #css_ul {
     list-style-type: none;
-    grid-column: 3/6;
+    grid-column: 1/5;
     grid-row: 3;
     justify-self: end;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    
 }
 
 #js_ul {
