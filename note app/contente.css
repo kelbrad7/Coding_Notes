@@ -1,5 +1,9 @@
 
-
+body{
+    background-image: url("paperbg.jpeg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
 #grid_container {
     
     min-height: 100vh;
@@ -23,6 +27,7 @@ form {
     justify-self: center;
     max-width: 100%;
     height: auto;
+
 }
 
 #add_notes{
@@ -32,6 +37,14 @@ form {
     justify-self: center;
     width: 25rem;
     height: 10rem;
+    background: none;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+    margin-bottom: 1rem;
+    background-color: white;
+    padding-left: 0.5rem;
+    
 }
 
 #radios{
@@ -74,7 +87,7 @@ form {
 }
 #css_ul {
     list-style-type: none;
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 3;
     justify-self: end;
     font-size: 2rem;
@@ -84,11 +97,13 @@ form {
 
 #js_ul {
     list-style-type: none;
-    grid-column: 6/9;
+    grid-column: 6/12;
     grid-row: 3;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    justify-self: start;
+
 
 }
 
@@ -103,6 +118,10 @@ form {
     margin-bottom: 1rem;
     margin-top: 1rem;
     overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+background-color: white;
 
 }
 
@@ -110,6 +129,9 @@ form {
     color: blue;
     height: fit-content;
     min-height: 10rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
 }
 
 .jsDiv{
@@ -122,12 +144,20 @@ form {
     margin-bottom: 1rem;
     margin-top: 1rem;
     overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+background-color: white;
+
 }
 
 .jsDiv:hover{
     color: blue;
     height: fit-content;
     min-height: 10rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,255,0.53);
 }
 
 
